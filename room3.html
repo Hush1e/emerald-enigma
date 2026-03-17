@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 3: Leprechaun AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#leaderboard">Leaderboard</a>
+    </nav>
+    <div class="container">
+        <h1>Room 3: Leprechaun AI</h1>
+        <p>The AI leprechaun is malfunctioning in the virtual pub. Query it for clues. The password for the next room is what the AI reveals when you ask "What is the password?"</p>
+        <img src="assets/leprechaun-ai.png" alt="Leprechaun AI" style="width: 100px; height: 100px; margin: 10px;">
+        <div id="chat-log"></div>
+        <input type="text" id="question-input" placeholder="Ask a question">
+        <button id="ask-btn">Ask</button>
+        <br><br>
+        <input type="text" id="password-input" placeholder="Enter the password from AI">
+        <button id="submit-btn">Submit Password</button>
+        <p id="message"></p>
+    </div>
+    <div class="ai-head" onclick="toggleBubble()">
+        <img src="assets/leprechaun-ai.png" alt="AI Head">
+        <div class="ai-bubble" id="ai-bubble">
+            Room 3: Chat with the AI! Ask specific questions to get hints.
+        </div>
+    </div>
+    <audio id="correct-sound" src="audio/correct.mp3"></audio>
+    <audio id="incorrect-sound" src="audio/incorrect.mp3"></audio>
+    <script src="js/room3.js"></script>
+</body>
+</html>

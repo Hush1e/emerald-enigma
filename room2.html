@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 2: Shamrock Cipher</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#leaderboard">Leaderboard</a>
+    </nav>
+    <div class="container">
+        <h1>Room 2: Shamrock Cipher</h1>
+        <p>You intercepted an encrypted holographic message from the hacker. Decode it to uncover the leprechaun's secret. It's a Caesar cipher with shift 3.</p>
+        <img src="assets/shamrock-icon.png" alt="Shamrock Icon" style="width: 100px; height: 100px; margin: 10px;">
+        <p>Encrypted: UIF IBDFSF VTFE AI UP TJEF UIF QPU PG HPME XSPOHMZ</p>
+        <input type="text" id="decode-input" placeholder="Enter the decoded message">
+        <button id="submit-btn">Submit</button>
+        <p id="message"></p>
+    </div>
+    <div class="ai-head" onclick="toggleBubble()">
+        <img src="assets/leprechaun-ai.png" alt="AI Head">
+        <div class="ai-bubble" id="ai-bubble">
+            Room 2: Caesar cipher! Shift each letter back by 3. For example, X becomes U.
+        </div>
+    </div>
+    <audio id="correct-sound" src="audio/correct.mp3"></audio>
+    <audio id="incorrect-sound" src="audio/incorrect.mp3"></audio>
+    <script src="js/room2.js"></script>
+</body>
+</html>

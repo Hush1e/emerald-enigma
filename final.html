@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pot of Gold Claimed!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#leaderboard">Leaderboard</a>
+    </nav>
+    <div class="container">
+        <h1>Congratulations! Pot of Gold Claimed!</h1>
+        <p>You successfully hacked back the AI leprechaun and secured the legendary pot of gold. Happy St. Patrick's Day!</p>
+        <img src="assets/pot-gold.png" alt="Pot of Gold" style="width: 150px; height: 150px; margin: 10px;">
+        <p id="time-display"></p>
+        <div class="leaderboard">
+            <h2>Top Scores</h2>
+            <ol id="final-leaderboard"></ol>
+        </div>
+        <button onclick="window.location.href='index.html'">Play Again</button>
+    </div>
+    <div class="ai-head" onclick="toggleBubble()">
+        <img src="assets/leprechaun-ai.png" alt="AI Head">
+        <div class="ai-bubble" id="ai-bubble">
+            Well done! Check your time and see if you made the leaderboard.
+        </div>
+    </div>
+    <audio id="victory-sound" src="audio/victory.mp3"></audio>
+    <script src="js/final.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 4: Pot of Gold Phishing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#leaderboard">Leaderboard</a>
+    </nav>
+    <div class="container">
+        <h1>Room 4: Pot of Gold Phishing</h1>
+        <p>You received a holographic email claiming to be from the leprechaun council. It's a phishing scam. Extract the password from the malicious link.</p>
+        <img src="assets/pot-gold.png" alt="Pot of Gold" style="width: 100px; height: 100px; margin: 10px;">
+        <div style="background-color: rgba(0, 0, 0, 0.9); padding: 10px; border: 1px solid #00ff00; border-radius: 5px;">
+            <p><strong>From:</strong> fake@leprechaun.net</p>
+            <p><strong>Subject:</strong> Urgent: Claim Your Pot of Gold</p>
+            <p>Dear Adventurer,</p>
+            <p>Your AI leprechaun account has been hacked. Click here to reset and claim your gold: <a href="http://fake-gold.com/reset?pass=ShamrockKey">Claim Gold</a></p>
+            <p>Best,<br>Leprechaun Council</p>
+        </div>
+        <input type="text" id="password-input" placeholder="Enter the password from the link">
+        <button id="submit-btn">Submit</button>
+        <p id="message"></p>
+    </div>
+    <div class="ai-head" onclick="toggleBubble()">
+        <img src="assets/leprechaun-ai.png" alt="AI Head">
+        <div class="ai-bubble" id="ai-bubble">
+            Room 4: Phishing alert! Check the link URL for the password parameter.
+        </div>
+    </div>
+    <audio id="correct-sound" src="audio/correct.mp3"></audio>
+    <audio id="incorrect-sound" src="audio/incorrect.mp3"></audio>
+    <script src="js/room4.js"></script>
+</body>
+</html>

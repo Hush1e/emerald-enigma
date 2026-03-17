@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 1: Leprechaun Code</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#leaderboard">Leaderboard</a>
+    </nav>
+    <div class="container">
+        <h1>Room 1: Leprechaun Code</h1>
+        <p>The hack originated from a suspicious code snippet in the AI leprechaun's holographic logs. Scan the code and extract the hidden password to access the next dimension.</p>
+        <img src="assets/leprechaun-icon.png" alt="Leprechaun Icon" style="width: 100px; height: 100px; margin: 10px;">
+        <pre><code>
+function findGold(teamA, teamB) {
+    // AI leprechaun logic here
+    var password = "EmeraldGold2023"; // This is not the password
+    if (teamA.luck > teamB.luck) {
+        return teamA;
+    } else {
+        return teamB;
+    }
+}
+        </code></pre>
+        <p>Hint: The password is embedded in the code, but not in the comment.</p>
+        <input type="text" id="password-input" placeholder="Enter the password">
+        <button id="submit-btn">Submit</button>
+        <p id="message"></p>
+    </div>
+    <div class="ai-head" onclick="toggleBubble()">
+        <img src="assets/leprechaun-ai.png" alt="AI Head">
+        <div class="ai-bubble" id="ai-bubble">
+            Room 1: Look closely at the code. The password is in the variable assignment, not the comment!
+        </div>
+    </div>
+    <audio id="correct-sound" src="audio/correct.mp3"></audio>
+    <audio id="incorrect-sound" src="audio/incorrect.mp3"></audio>
+    <script src="js/room1.js"></script>
+</body>
+</html>

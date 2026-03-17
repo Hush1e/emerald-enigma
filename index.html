@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Enigma Cyber Escape</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#leaderboard">Leaderboard</a>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Emerald Enigma Cyber Escape!</h1>
+        <p>In this futuristic virtual escape room, you're a high school cybersecurity expert in a cyberpunk Dublin. The AI leprechaun guide has been hacked on St. Patrick's Day, hiding the legendary pot of gold. Use your skills to solve puzzles, fix the AI, and claim the treasure!</p>
+        <p>Each room has a holographic challenge. Solve it to unlock the next dimension.</p>
+        <form id="signup-form">
+            <input type="text" id="player-name" placeholder="Enter your name for the leaderboard" required>
+            <button type="submit">Start the Escape</button>
+        </form>
+        <div class="leaderboard" id="leaderboard">
+            <h2>Top Scores</h2>
+            <ol id="leaderboard-list"></ol>
+        </div>
+    </div>
+    <div class="ai-head" onclick="toggleBubble()">
+        <img src="assets/max-headroom-ai.png" alt="Max Headroom AI">
+        <div class="ai-bubble" id="ai-bubble">
+            <img src="assets/qr-code.png" alt="QR Code to Hosted Game" style="width: 150px; height: 150px; animation: fadeIn 2s ease-in;">
+        </div>
+    </div>
+    <audio id="start-sound" src="audio/start.mp3"></audio> <!-- Placeholder for start sound -->
+    <script src="js/script.js"></script>
+</body>
+</html>
