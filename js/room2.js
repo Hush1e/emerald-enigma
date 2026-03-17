@@ -1,6 +1,6 @@
 document.getElementById('submit-btn').addEventListener('click', function() {
     var input = document.getElementById('decode-input').value.toUpperCase();
-    if (input === 'THE GREAT QUEST FOR THE POT OF GOLD UNLEASH') {
+    if (input === 'THE HACKER USED AI TO FIND THE POT OF GOLD WRONGLY') {
         document.getElementById('correct-sound').play();
         document.getElementById('message').textContent = 'Correct! Proceeding to next room.';
         setTimeout(function() {
