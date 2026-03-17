@@ -1,6 +1,6 @@
 document.getElementById('submit-btn').addEventListener('click', function() {
     var input = document.getElementById('team-input').value.toLowerCase();
-    if (input === 'shamrocks') {
+    if (input === 'shamrock' || input === 'shamrocks') {
         document.getElementById('correct-sound').play();
         document.getElementById('message').textContent = 'Correct! You found the pot of gold!';
         setTimeout(function() {
