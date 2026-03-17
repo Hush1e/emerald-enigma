@@ -91,6 +91,11 @@ input {
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 #chat-log {
     background-color: rgba(0, 0, 0, 0.7);
     border: 1px solid #00ff00;
@@ -202,4 +207,95 @@ nav a:hover {
     right: 20px;
     border: 10px solid transparent;
     border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Account for fixed nav */
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .ai-head {
+        width: 80px;
+        height: 80px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .ai-head img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ai-bubble {
+        max-width: 150px;
+        bottom: 100px;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .ai-head {
+        width: 70px;
+        height: 70px;
+    }
+
+    .ai-head img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ai-bubble {
+        max-width: 120px;
+        bottom: 90px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    nav {
+        padding: 8px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
 }
