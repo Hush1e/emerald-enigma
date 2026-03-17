@@ -36,10 +36,23 @@ Open `index.html` in a web browser to start.
 For free shamrock PNGs: Search "shamrock PNG" on [PNGFind](https://www.pngfind.com/) or [Pixabay](https://pixabay.com/).
 For leprechaun PNGs: Search "leprechaun PNG" on the same sites.
 
-## Technologies
+## Hosting
 
-- HTML
-- CSS (with animations)
-- JavaScript (with localStorage for leaderboard)
+To host this game online for sharing via QR code:
 
-Enjoy the game and compete for bragging rights!
+1. Create a new public repository on GitHub (e.g., `emerald-enigma`).
+2. Push this code to the repository:
+   ```
+   git remote add origin https://github.com/YOUR_USERNAME/emerald-enigma.git
+   git push -u origin master
+   ```
+3. In the repository settings, enable GitHub Pages:
+   - Go to Settings > Pages
+   - Set source to "Deploy from a branch"
+   - Select "master" branch and "/ (root)" folder
+   - Save
+4. The hosted URL will be `https://YOUR_USERNAME.github.io/emerald-enigma/`
+5. Generate a QR code for this URL (use a free online QR generator like qr-code-generator.com)
+6. Save the QR code as `assets/qr-code.png` to replace the placeholder.
+
+Now the floating AI head will display the QR code linking to the hosted game!

@@ -1,22 +1,22 @@
 body {
     font-family: 'Courier New', monospace; /* Futuristic font */
-    background: linear-gradient(135deg, #004400, #00aa00); /* Green gradient */
+    background: linear-gradient(135deg, #004400, #00aa00, #004400); /* Green gradient */
+    background-size: 400% 400%;
+    animation: backgroundShift 10s ease-in-out infinite;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('../assets/shamrock-bg.png'); /* Placeholder for shamrock background */
-    background-size: cover;
     color: #00ff00; /* Neon green text */
     text-shadow: 0 0 10px #00ff00; /* Glow effect */
-    animation: backgroundGlow 5s ease-in-out infinite alternate; /* Animated background glow */
 }
 
-@keyframes backgroundGlow {
-    0% { filter: brightness(1); }
-    100% { filter: brightness(1.2); }
+@keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -158,7 +158,16 @@ nav a:hover {
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 0 20px rgba(0,255,0,0.5);
-    animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite, glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
 }
 
 @keyframes float {

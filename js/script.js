@@ -1,27 +1,19 @@
 let playerName = '';
 let startTime = 0;
 
-document.getElementById('signup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    playerName = document.getElementById('player-name').value;
-    startTime = Date.now();
-    localStorage.setItem('playerName', playerName);
-    localStorage.setItem('startTime', startTime);
-    // document.getElementById('start-sound').play(); // Play start sound - commented out as audio files are placeholders
-    window.location.href = 'room1.html';
+document.getElementById('qr-code').addEventListener('click', function() {
+    playerName = prompt('Enter your name for the leaderboard:');
+    if (playerName) {
+        startTime = Date.now();
+        localStorage.setItem('playerName', playerName);
+        localStorage.setItem('startTime', startTime);
+        // document.getElementById('start-sound').play(); // Play start sound - commented out as audio files are placeholders
+        window.location.href = 'room1.html';
+    }
 });
 
-// Load leaderboard
-function loadLeaderboard() {
-    const leaderboard = JSON.parse(localStorage.getItem('leaderboard') || '[]');
-    const list = document.getElementById('leaderboard-list');
-    list.innerHTML = '';
-    leaderboard.sort((a, b) => a.time - b.time).slice(0, 5).forEach(entry => {
-        const li = document.createElement('li');
-        li.textContent = `${entry.name}: ${entry.time}s`;
-        list.appendChild(li);
-    });
-}
+// Load leaderboard - but since no leaderboard div, perhaps remove or keep for future
+// function loadLeaderboard() { ... } - removed since no leaderboard on index
 
 function toggleBubble() {
     const bubble = document.getElementById('ai-bubble');

@@ -11,23 +11,10 @@
         <a href="index.html">Home</a>
         <a href="#leaderboard">Leaderboard</a>
     </nav>
-    <div class="container">
-        <h1>Welcome to Emerald Enigma Cyber Escape!</h1>
-        <p>In this futuristic virtual escape room, you're a high school cybersecurity expert in a cyberpunk Dublin. The AI leprechaun guide has been hacked on St. Patrick's Day, hiding the legendary pot of gold. Use your skills to solve puzzles, fix the AI, and claim the treasure!</p>
-        <p>Each room has a holographic challenge. Solve it to unlock the next dimension.</p>
-        <form id="signup-form">
-            <input type="text" id="player-name" placeholder="Enter your name for the leaderboard" required>
-            <button type="submit">Start the Escape</button>
-        </form>
-        <div class="leaderboard" id="leaderboard">
-            <h2>Top Scores</h2>
-            <ol id="leaderboard-list"></ol>
-        </div>
-    </div>
-    <div class="ai-head" onclick="toggleBubble()">
-        <img src="assets/max-headroom-ai.png" alt="Max Headroom AI">
-        <div class="ai-bubble" id="ai-bubble">
-            <img src="assets/qr-code.png" alt="QR Code to Hosted Game" style="width: 150px; height: 150px; animation: fadeIn 2s ease-in;">
+    <div class="ai-head">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiByeD0iNTAiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwZmYwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1mYW1pbHk9IkNvdXJpZXIgTmV3LCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMwMGZmMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFJPC90ZXh0Pgo8L3N2Zz4=" alt="Max Headroom AI">
+        <div class="ai-bubble" id="ai-bubble" style="display: block;">
+            <img id="qr-code" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiBmaWxsPSIjZmZmZmZmIi8+Cjx0ZXh0IHg9Ijc1IiB5PSI3NSIgZm9udC1mYW1pbHk9IkNvdXJpZXIgTmV3LCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMwMDAwMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlFSIENPREU8L3RleHQ+Cjwvc3ZnPg==" alt="QR Code to Hosted Game" style="width: 150px; height: 150px; animation: fadeIn 2s ease-in; cursor: pointer;">
         </div>
     </div>
     <audio id="start-sound" src="audio/start.mp3"></audio> <!-- Placeholder for start sound -->
