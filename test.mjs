@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const code=await readFile(new URL('./game.js',import.meta.url),'utf8');
+const {accepts,safeTimes,answers}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+answers.forEach((a,i)=>{assert(accepts(i,'  '+a.toUpperCase()+'  '));assert(!accepts(i,'wrong'));});
+assert(accepts(4,'Shamrocks'));
+assert.deepEqual(safeTimes('{bad'),[]);assert.deepEqual(safeTimes('null'),[]);
+assert.deepEqual(safeTimes('[{"name":"x","seconds":null,"id":"a"}]'),[]);
+assert.equal(safeTimes('[{"name":"x","seconds":20,"id":"b"},{"name":"y","seconds":10,"id":"a"}]')[0].seconds,10);
+console.log('PASS: all room answers, normalization, wrong answers, plural riddle and malformed local records.');
